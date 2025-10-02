@@ -1,5 +1,5 @@
 [project]
-name = "univ-oop-prac-2"
+name = "univ-oop-prac-2_02"
 version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
@@ -16,6 +16,7 @@ docstring-code-format = true
 [tool.ruff.lint]
 select = ["ALL"]
 ignore = [
+  "ANN204", # missing return type annotation for magic method
   "D1",     # undocumented
   "D203",   # one blank line before class
   "D213",   # multi-line summary second line
@@ -27,10 +28,11 @@ ignore = [
   "T201",   # print found
   "ERA001", # Found commented-out code
   "PD011",  # pandas use of dot values
+  "RUF001",
   "RUF002",
+  "RUF003",
 ]
 unfixable = [
-  "F401", # unused import
   "F841", # unused variable
 ]
 
