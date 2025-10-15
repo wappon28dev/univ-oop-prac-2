@@ -31,6 +31,10 @@ ignore = [
   "RUF001",
   "RUF002",
   "RUF003",
+  "EM101",
+  "EM102",
+  "EM103",
+  "TRY003",
 ]
 unfixable = [
   "F841", # unused variable
