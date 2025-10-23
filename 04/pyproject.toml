@@ -4,7 +4,13 @@ version = "0.1.0"
 description = "Add your description here"
 readme = "README.md"
 requires-python = "==3.11.2"
-dependencies = ["mlx-whisper>=0.4.3", "numpy>=2.3.4", "pydub>=0.25.1"]
+dependencies = [
+    "ffmpeg-python>=0.2.0",
+    "mlx-whisper>=0.4.3",
+    "numpy>=2.3.4",
+    "pydub>=0.25.1",
+    "typed-ffmpeg>=3.7.1",
+]
 
 [tool.ruff]
 line-length = 100

@@ -1,4 +1,9 @@
 {
   "$schema": "https://raw.githubusercontent.com/streetsidesoftware/cspell/main/cspell.schema.json",
-  "words": []
+  "words": [
+    "alsa",
+    "avfoundation",
+    "dshow",
+    "gdigrab"
+  ]
 }
