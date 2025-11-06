@@ -1,18 +1,33 @@
-from typing import Final
+from typing import Final, NamedTuple
 
 import cv2
 import numpy as np
 
-from my_module.lecture05_camera_image_capture import BGR, MyVideoCapture, Shape
+from my_module.K24132.lecture05_camera_image_capture import MyVideoCapture
+
+
+class Shape(NamedTuple):
+    height: int
+    width: int
+    channels: int
+
+
+class BGR(NamedTuple):
+    blue: int
+    green: int
+    red: int
 
 
 def lecture05_01() -> None:
     app = MyVideoCapture()
     app.run()
 
-    frame = app.get_frame()
-    google_img = cv2.imread("images/google.png")
+    frame: np.ndarray | None = app.get_img()
 
+    if frame is None:
+        raise ValueError("カメラから画像を取得できませんでした。")
+
+    google_img = cv2.imread("images/google.png")
     if google_img is None:
         raise ValueError("Googleロゴ画像を読み込めませんでした。パスを確認してください。")
 
