@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>占いアプリ</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='uranai.css') }}"
+    />
+  </head>
+  <body>
+    <main>
+      <h1>占いアプリ</h1>
+      <p>あなたの運勢を占います。</p>
+      <form action="/uranai/play" method="POST">
+        <div class="form-group">
+          <label for="name">名前:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="birthday">生年月日:</label>
+          <input type="date" id="birthday" name="birthday" required />
+        </div>
+        <button type="submit">占う</button>
+      </form>
+      <div class="link-container">
+        <a href="/">トップへ戻る</a>
+      </div>
+    </main>
+  </body>
+</html>
