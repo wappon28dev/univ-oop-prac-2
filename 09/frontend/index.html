@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>アドレス帳</title>
+
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+
+  <body>
+    <h1>アドレス帳</h1>
+
+    <div class="form-container">
+      <h2 id="form-title">新規登録</h2>
+      <input type="hidden" id="contact-id" />
+
+      <div class="form-group">
+        <label for="name">氏名 (*必須)</label>
+        <input type="text" id="name" placeholder="例: 山田 太郎" />
+      </div>
+      <div class="form-group">
+        <label for="phone">電話番号</label>
+        <input type="text" id="phone" placeholder="例: 090-1234-5678" />
+      </div>
+      <div class="form-group">
+        <label for="email">メールアドレス</label>
+        <input type="email" id="email" placeholder="例: yamada@example.com" />
+      </div>
+
+      <button id="btn-add" class="btn-primary" onclick="createContact()">
+        登録
+      </button>
+      <button id="btn-update" class="btn-update" onclick="updateContact()">
+        更新
+      </button>
+      <button id="btn-cancel" class="btn-cancel" onclick="resetForm()">
+        キャンセル
+      </button>
+    </div>
+
+    <div class="list-container">
+      <h2>登録リスト</h2>
+      <ul id="contact-list"></ul>
+    </div>
+  </body>
+</html>
